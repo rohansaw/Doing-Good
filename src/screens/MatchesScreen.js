@@ -73,10 +73,27 @@ export default class MatchesScreen extends React.Component {
         return false;
       }
         return (
-        <View style={styles.container}>   
+        <View style={styles.container}>
+          <View style={{flex:1}}>
+            <View style={styles.searchContainer}>
+              <TextInput
+                placeholder="🔍 Search"
+                onChangeText={(text) => this.setState({text})}
+                value={this.state.text}
+                style={styles.search}
+              />
+              <Picker
+                selectedValue="Category"
+                style={{height: 50, width: 300, fontSize: 11}}>
+                <Picker.Item label="Category" value="Category" />
+                <Picker.Item  label="Haushalt" value="Haushalt" />
+                <Picker.Item label="Kueche" value="Küche" />
+              </Picker>
+            </View>   
+          </View>
           <View style={styles.loginContainer} >
             <View style={styles.headerContainer}>
-              <Text style={styles.header}>My Matches</Text>
+              <Text style={styles.header}>Chats</Text>
             </View>
             <ScrollView>
             <View style={styles.cardContainer}>
@@ -162,7 +179,29 @@ const styles = StyleSheet.create({
       
     },
     cardContainer : {
-        
+        marginBottom:50,
+    },
+    search : {
+      width: 65 + "%",
+      padding: 10,
+      margin: 20,
+      backgroundColor: '#F5F5F5',
+      color: Colors.grey,
+      borderRadius: 10,
+      fontSize:16
+    },
+    searchIcon : {
+      padding: 10,
+    },
+    searchContainer : {
+      flex: 1,
+      flexDirection: "row",
+      width:"100%",
+      marginLeft: 10,
+      marginRight: 10,
+      alignContent: 'center',
+      textAlign: 'center',
+      alignItems: 'center'
     }
   });
   

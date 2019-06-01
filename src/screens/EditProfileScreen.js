@@ -154,7 +154,7 @@ export default class EditProfileScreen extends React.Component {
               onChangeText= {(description)=> this.setState({description})}
             />
 
-            <Text>Distance to project</Text>
+            <Text>Search Radius</Text>
             <Slider
               style={{height: 40}}
               minimumValue={1}

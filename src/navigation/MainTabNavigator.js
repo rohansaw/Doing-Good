@@ -63,7 +63,7 @@ const NewJobStack = createStackNavigator({
 });
 
 NewJobStack.navigationOptions = {
-  tabBarLabel: 'New Quest',
+  tabBarLabel: 'Add Product',
   tabBarOptions: { 
     activeTintColor: Colors.weldonBlue,
   },
@@ -85,12 +85,12 @@ const MatchesStack = createStackNavigator({
 });
 
 MatchesStack.navigationOptions = {
-  tabBarLabel: 'Matches',
+  tabBarLabel: 'Chat',
   tabBarOptions: { 
     activeTintColor: Colors.weldonBlue,
   },
   tabBarIcon: ({ focused }) => (
-    <Icon name='md-heart' size={25} color={focused ? Colors.weldonBlue : Colors.stormcloud} /> 
+    <Icon name='md-chatbubbles' size={25} color={focused ? Colors.weldonBlue : Colors.stormcloud} /> 
   ),
 };
 

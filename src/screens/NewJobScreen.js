@@ -50,7 +50,7 @@ export default class NewJobScreen extends React.Component {
         <View style={styles.container}>   
           <View style={styles.loginContainer} >
             <View style={styles.headerContainer}>
-              <Text style={styles.header}>Add new Quest</Text>
+              <Text style={styles.header}>Add new Product</Text>
             </View>
             <TextInput 
                 style={styles.input}
@@ -78,35 +78,9 @@ export default class NewJobScreen extends React.Component {
 
             <TextInput 
                 style={styles.inputDesc}
-                placeholder='Description - What do you need help with?' 
+                placeholder='Description - Give Inforamtion about your Product' 
                 onChangeText= {(description)=> this.setState({description})}
             />   
-            <View style={{alignItems:'center'}}>
-                <DatePicker
-                    style={{width: 200}}
-                    date={this.state.date} //initial date from state
-                    mode="date" //The enum of date, datetime and time
-                    placeholder="Select Date"
-                    format="DD-MM-YYYY"
-                    minDate="19-05-2019"
-                    maxDate="01-01-2029"
-                    confirmBtnText="Confirm"
-                    cancelBtnText="Cancel"
-                    customStyles={{
-                        dateIcon: {
-                        position: 'absolute',
-                        left: 0,
-                        top: 4,
-                        marginLeft: 0
-                        },
-                        dateInput: {
-                        borderRadius:10,
-                        marginLeft: 36
-                        }
-                    }}
-                    onDateChange={(date) => {this.setState({date: date})}}
-                    />
-            </View>
            
 
             <Text>{this.state.error}</Text>
@@ -114,7 +88,7 @@ export default class NewJobScreen extends React.Component {
             <View style={styles.loginContainer}>
               <TouchableOpacity style={styles.loginItem}>
                 <Text onPress={()=> this.publishRequest()} 
-                style={{textAlign:'center', fontSize: 18, color:Colors.weldonBlue}}>Publish Quest </Text>
+                style={{textAlign:'center', fontSize: 18, color:Colors.weldonBlue}}>Publish Product </Text>
               </TouchableOpacity>
            </View>
 

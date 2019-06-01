@@ -41,13 +41,12 @@ export default class LoginScreen extends React.Component {
           <View style={{justifyContent:'center', alignItems: 'center', marginTop: 10, borderRadius:40, overflow:'hidden'}}>
             <Image
               style={styles.strech}
-              source={require('../assets/logo.png')}
+              source={require('../assets/fairleihen.png')}
               /> 
           </View>
           <View style={styles.loginContainer} >
             <View style={styles.headerContainer}>
-              
-              <Text style={styles.header}>DOING GOOD</Text>
+            
                 
             </View>
             <TextInput 
@@ -66,7 +65,7 @@ export default class LoginScreen extends React.Component {
 
             <View style={styles.loginContainer}>
               <TouchableOpacity style={styles.loginItem}>
-                <Text onPress={()=> this.loginUser(this.state.email, this.state.password)} 
+                <Text onPress={()=> this.loginUser('test@test.de', '123456') } 
                 style={{textAlign:'center', fontSize: 18, color:Colors.weldonBlue}}>Login! </Text>
               </TouchableOpacity>
            </View>
@@ -75,9 +74,7 @@ export default class LoginScreen extends React.Component {
               <Text style={{textAlign:'center'} }>Not registered yet? <Text onPress={()=> this.onSignUp()} style={{fontWeight:'bold'}}>Sign Up! </Text></Text>   
             </View>
 
-            <View style={styles.signUpItem}>
-              <Text onPress={()=> this.loginUser('test@test.de', '123456')} style={{fontWeight:'bold'}}>Home </Text>
-            </View>
+           
 
           </View>
         </View>
@@ -140,9 +137,9 @@ const styles = StyleSheet.create({
       justifyContent:'center'
     },
     strech :{
-      
-      width: 64,
-      height: 64,
+      marginTop:50,
+      width: 200,
+      height: 200,
     }
   });
   

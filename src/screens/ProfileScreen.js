@@ -77,7 +77,7 @@ export default class ProfileScreen extends React.Component {
     const imageUrl = 'https://www.welt.de/img/vermischtes/mobile166641813/3792501637-ci102l-w1024/CRESTED-BLACK-MACAQUE.jpg';
     return (
     <View style={styles.headerWrapper}>
-      <View style={{ marginTop: 10, paddinTop: 20, flexDirection: "row" }}>
+      <View style={{ marginTop: 10, flexDirection: "row" }}>
         <View style={styles.profileImage} >
             <Image
               style={{width:100, height:100}}
@@ -92,11 +92,7 @@ export default class ProfileScreen extends React.Component {
             padding: 5
           }}
         >
-          <View style={{ flexDirection: "row", flex: 1, paddingBottom: 40}}>
-            <View style={{ flex: 1, alignItems: "center" , }}>
-              <Text style ={{fontWeight:'bold', fontSize:16}}>{karmapoints}<Image style={{height:30, width:30}} source={require('../assets/karmapoints_icon.png')}  />  <Text>Karmapoints</Text></Text>    
-            </View>
-          </View>
+        <Image style={{height:25, width:150}} source={require('../assets/rating.png')}  />
           <View
             style={{
               marginTop:10,
