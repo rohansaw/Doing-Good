@@ -17,6 +17,9 @@ const HomeStack = createStackNavigator({
       navigationOptions: {
         header: null,
     },
+  Product: {
+    screen : MatchScreen,
+  },
   },
 });
 

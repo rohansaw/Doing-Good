@@ -13,8 +13,8 @@ export default class MatchScreen extends React.Component{
 
     render(){
         return(
-            <View>
-                <Text>{this.props.navigation.getParam('itemId')}</Text>
+            <View>     
+                <Text style={{fontSize:30, marginTop: 20}}>Chat function coming soon!</Text>
             </View>
         );
     }

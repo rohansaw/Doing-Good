@@ -9,10 +9,10 @@ import {
 import Colors from "../assets/Colors";
 import { withNavigation } from "react-navigation";
 
-class MatchPreview extends React.Component {
+class ChatPreview extends React.Component {
 
     showJob(){
-        //this.props.navigation.push('Product', { itemId : this.props.item.title})
+        this.props.navigation.push('Match', { itemId : this.props.item.title})
     }
     
     render(){
@@ -24,12 +24,12 @@ class MatchPreview extends React.Component {
                 <View style={styles.productLeft}>
                     <Image
                         style={{width: 150, height: 150}}
-                        source={require('../assets/logo.png')}
+                        source={require('../assets/user.png')}
                     />
                 </View>
                 <View style={styles.productRight}>
                     <Text style={styles.productTitle}>{this.props.item.title.charAt(0).toUpperCase() + this.props.item.title.slice(1)}</Text>
-                    <Text style={styles.productAdress}>{this.props.item.city}</Text>
+                    <Text style={styles.productAdress}>Contact Now!</Text>
                 </View>
             </TouchableOpacity>
         );
@@ -78,4 +78,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default withNavigation(MatchPreview);
+export default withNavigation(ChatPreview);

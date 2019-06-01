@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import firebase from 'firebase';
 import { TouchableHighlight, TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
-import MatchPreview from '../components/MatchPreview';
+import ChatPreview from '../components/ChatPreview';
 import SplashScreen from '../components/SplashScreen';
 import Colors from '../assets/Colors';
 
@@ -87,7 +87,7 @@ export default class MatchesScreen extends React.Component {
                   return this.state.requests[key];
                 })}
                 renderItem={({ item }) => (
-                    <MatchPreview item={item} />
+                    <ChatPreview item={item} />
                 )}
                 keyExtractor={(item, index) => index}
             />
